@@ -1,17 +1,15 @@
 import React from "react"
 import { Box, Button } from "@mui/material"
 import { useNavigate } from "react-router-dom"
+import { Home } from "../Home"
 
-interface HomeProps {}
+interface NotFoundProps {}
 
-export const Home: React.FC<HomeProps> = ({}) => {
+export const NotFound: React.FC<NotFoundProps> = ({}) => {
     const buttonStyle = { textTransform: "unset" }
     const navigate = useNavigate()
-    const navigateNewList = () => {
-        navigate("/new-list")
-    }
-    const navigateConfigLists = () => {
-        navigate("/config-lists")
+    const navigateHome = () => {
+        navigate("/home")
     }
 
     return (
@@ -25,11 +23,10 @@ export const Home: React.FC<HomeProps> = ({}) => {
                 gap: "5vw",
             }}
         >
-            <Button variant="contained" onClick={navigateNewList} sx={buttonStyle}>
-                Nova lista
-            </Button>
-            <Button variant="contained" onClick={navigateConfigLists} sx={buttonStyle}>
-                Configurar listas
+            <h1>Erro</h1>
+            <h2>Caminho não encontrado</h2>
+            <Button variant="contained" onClick={navigateHome} sx={buttonStyle}>
+                Voltar ao início
             </Button>
         </Box>
     )
