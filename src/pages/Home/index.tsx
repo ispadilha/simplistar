@@ -25,10 +25,10 @@ export const Home: React.FC<HomeProps> = ({}) => {
                 gap: "5vw",
             }}
         >
-            <Button variant="contained" onClick={navigateNewList} sx={buttonStyle}>
+            <Button variant="contained" onClick={navigateNewList} fullWidth sx={buttonStyle}>
                 Nova lista
             </Button>
-            <Button variant="contained" onClick={navigateConfigLists} sx={buttonStyle}>
+            <Button variant="contained" onClick={navigateConfigLists} fullWidth sx={buttonStyle}>
                 Configurar listas
             </Button>
         </Box>

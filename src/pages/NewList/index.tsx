@@ -48,7 +48,13 @@ export const NewList: React.FC<NewListProps> = ({}) => {
                 gap: "5vw",
             }}
         >
-            <TextField value={listName} onChange={(e) => setListName(e.target.value)} sx={textFieldStyle} />
+            <TextField
+                variant="standard"
+                value={listName}
+                onChange={(e) => setListName(e.target.value)}
+                fullWidth
+                sx={{ ...textFieldStyle, marginBottom: "auto" }}
+            />
 
             {!!items && (
                 <Box>
@@ -60,21 +66,21 @@ export const NewList: React.FC<NewListProps> = ({}) => {
                 </Box>
             )}
 
-            <TextField value={newItem} onChange={(e) => setNewItem(e.target.value)} sx={textFieldStyle} />
+            <TextField variant="standard" value={newItem} onChange={(e) => setNewItem(e.target.value)} fullWidth sx={textFieldStyle} />
 
-            <Button variant="contained" onClick={handleAddItem} sx={buttonStyle}>
+            <Button variant="contained" onClick={handleAddItem} fullWidth sx={buttonStyle}>
                 Adicionar item
             </Button>
 
-            <Button variant="contained" onClick={resetList} sx={buttonStyle}>
+            <Button variant="contained" onClick={resetList} fullWidth sx={buttonStyle}>
                 Limpar lista
             </Button>
 
-            <Button variant="contained" onClick={handleSaveList} sx={buttonStyle}>
+            <Button variant="contained" onClick={handleSaveList} fullWidth sx={buttonStyle}>
                 Salvar lista
             </Button>
 
-            <Button variant="contained" onClick={navigateHome} sx={buttonStyle}>
+            <Button variant="contained" onClick={navigateHome} fullWidth sx={buttonStyle}>
                 Voltar ao início
             </Button>
         </Box>

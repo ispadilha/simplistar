@@ -25,7 +25,7 @@ export const NotFound: React.FC<NotFoundProps> = ({}) => {
         >
             <h1>Erro</h1>
             <h2>Caminho não encontrado</h2>
-            <Button variant="contained" onClick={navigateHome} sx={buttonStyle}>
+            <Button variant="contained" onClick={navigateHome} fullWidth sx={buttonStyle}>
                 Voltar ao início
             </Button>
         </Box>

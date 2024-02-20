@@ -23,7 +23,7 @@ export const ConfigLists: React.FC<ConfigListsProps> = ({}) => {
                 gap: "5vw",
             }}
         >
-            <Button variant="contained" onClick={navigateHome} sx={buttonStyle}>
+            <Button variant="contained" onClick={navigateHome} fullWidth sx={buttonStyle}>
                 Voltar ao início
             </Button>
         </Box>
