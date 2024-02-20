@@ -1,6 +1,15 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  padding: 5vw;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

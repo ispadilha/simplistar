@@ -1,18 +1,30 @@
 import { createTheme } from "@mui/material"
-import { colors } from "../style/colors"
+
+const colors = {
+    primary: "#0074cc",
+    secondary: "#f3c6d0",
+
+    success: "#34A853",
+
+    warning: "#ffb74d",
+
+    background: {
+        default: "#F1F1F1",
+        paper: "#F1F1F1",
+    },
+
+    text: {
+        primary: "#332277",
+        secondary: "#E7342D",
+    },
+}
 
 export const useMuiTheme = () => {
     const THEME = createTheme({
         typography: {
-            fontSize: 14,
-            fontWeightLight: 300,
-            fontWeightRegular: 400,
-            fontWeightMedium: 500,
-            fontWeightBold: 600,
+            fontFamily: ["Sans Serif", "Futura Medium BT"].join(","),
         },
         palette: {
-            // mode: 'dark',
-
             primary: {
                 main: colors.primary,
             },
@@ -20,10 +32,22 @@ export const useMuiTheme = () => {
                 main: colors.secondary,
             },
 
+            background: {
+                default: colors.background.default,
+                paper: colors.background.paper,
+            },
+
             text: {
-                primary: colors.text.black,
-                // secondary: colors.text.white,
-                // disabled: colors.primary,
+                primary: colors.text.primary,
+                secondary: colors.text.secondary,
+            },
+
+            success: {
+                main: colors.success,
+            },
+
+            warning: {
+                main: colors.warning,
             },
         },
     })
