@@ -1,30 +1,22 @@
 import React from "react"
-import { Box, Button } from "@mui/material"
+import { Box, Button, useTheme } from "@mui/material"
 import { useNavigate } from "react-router-dom"
-import { Home } from "../Home"
+import { buttonStyle } from "../../styles/buttonStyle"
+import { pageStyle } from "../../styles/pageStyle"
 
 interface NotFoundProps {}
 
 export const NotFound: React.FC<NotFoundProps> = ({}) => {
-    const buttonStyle = { textTransform: "unset" }
+    const theme = useTheme()
     const navigate = useNavigate()
     const navigateHome = () => {
         navigate("/home")
     }
 
     return (
-        <Box
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "5vw",
-            }}
-        >
+        <Box sx={{ ...pageStyle, color: theme.palette.text.secondary }}>
             <h1>Erro</h1>
-            <h2>Caminho não encontrado</h2>
+            <p>Caminho não encontrado</p>
             <Button variant="contained" onClick={navigateHome} fullWidth sx={buttonStyle}>
                 Voltar ao início
             </Button>

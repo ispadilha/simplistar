@@ -1,11 +1,12 @@
 import React from "react"
 import { Box, Button } from "@mui/material"
 import { useNavigate } from "react-router-dom"
+import { buttonStyle } from "../../styles/buttonStyle"
+import { pageStyle } from "../../styles/pageStyle"
 
 interface HomeProps {}
 
 export const Home: React.FC<HomeProps> = ({}) => {
-    const buttonStyle = { textTransform: "unset" }
     const navigate = useNavigate()
     const navigateNewList = () => {
         navigate("/new-list")
@@ -15,16 +16,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
     }
 
     return (
-        <Box
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "5vw",
-            }}
-        >
+        <Box sx={pageStyle}>
             <Button variant="contained" onClick={navigateNewList} fullWidth sx={buttonStyle}>
                 Nova lista
             </Button>

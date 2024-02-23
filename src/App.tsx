@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@mui/material"
 import { useMuiTheme } from "./hooks/useMuiTheme"
 import { BrowserRouter } from "react-router-dom"
-import "./App.css"
+import "./styles/App.css"
 import { Routes } from "./Routes"
 
 function App() {
