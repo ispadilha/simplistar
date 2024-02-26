@@ -43,7 +43,7 @@ export const NewList: React.FC<NewListProps> = ({}) => {
     const liStyle = { color: theme.palette.text.primary }
 
     return (
-        <Box sx={pageStyle}>
+        <Box sx={{ ...pageStyle, justifyContent: "space-between" }}>
             <Grid container spacing={2}>
                 <Grid item xs={6}>
                     <Button variant="contained" color="secondary" onClick={navigateHome} fullWidth sx={buttonStyle}>
@@ -61,8 +61,10 @@ export const NewList: React.FC<NewListProps> = ({}) => {
                 sx={{
                     display: "flex",
                     width: "100%",
-                    // justifyContent: "start",
-                    padding: "5vw",
+                    padding: "5vw 10vw",
+                    height: "50vh",
+                    overflowY: "auto",
+                    border: `2px solid ${theme.palette.grey[500]}`,
                 }}
             >
                 <ul>
@@ -90,7 +92,14 @@ export const NewList: React.FC<NewListProps> = ({}) => {
                     </Button>
                 </Grid>
                 <Grid item xs={12}>
-                    <Button variant="contained" color="success" onClick={() => setSaveDialogOpen(true)} fullWidth sx={buttonStyle}>
+                    <Button
+                        variant="contained"
+                        color="success"
+                        onClick={() => setSaveDialogOpen(true)}
+                        fullWidth
+                        disabled={!items.length}
+                        sx={buttonStyle}
+                    >
                         Salvar lista
                     </Button>
                 </Grid>
